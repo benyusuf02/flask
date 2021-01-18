@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% from "includes/formhelpers.html" import render_field %}
+{% block title %}
+  Firma Kayıt
+{% endblock title %}
+{% block body %}
+  
+{% from "includes/formhelpers.html" import render_field %}
+    <form method=post>
+      <div class="form-group border" style=" width: 200px; height: 550px; float: left;">
+        <dl>
+         <div class="form-control as"> {{ render_field(form.name) }}</div><br><br><br>
+         <div class="form-control as" >{{ render_field(form.surname) }}  </div><br><br><br>
+<br>          <div class="form-control as">{{ render_field(form.point) }}</div><br><br><br>
+    <br>        <div class="form-control as">{{ render_field(form.point1) }}</div> <br>
+        <br>      <div class="form-control as">{{ render_field(form.point2) }}<br><br>
+        </dl><br><br><br>
+        <p><input type="submit" value=Register>
+      </div></div>
+      <div>
+       <img src="https://play-lh.googleusercontent.com/k0f0lATV4mgqc43_aWIOJooa4Bf-rBnqKLRXu8CClf9WP5qQmzDYwVd-i7EnNNmAgxA" style="width: 60%; height: 50%; float: left;" alt="">
+      </div>
+      </form>
+{% endblock body %}
+  

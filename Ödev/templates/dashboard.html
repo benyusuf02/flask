@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block title %}
+Yetenek Tablosu
+{% endblock title %}
+{% block body %}
+
+  {% if articles %}
+<div class="container">
+  <h2>Hover Rows</h2>
+  <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+  <table class="table table-hover">
+    <thead>
+    <thead>
+      <tr>
+        <th>İD</th>
+        <th>NAME</th>
+        <th>SURNAME</th>
+        <th>Muhasebe Programları</th>
+        <th>Ofis Programları</th>
+        <th>Teknik bilgi</th>
+      </tr>
+    </thead>
+    {% for ada in articles %}
+  
+    <tbody>
+      <tr>
+        <td>{{ada[0]}}</td>
+        <td>{{ada[1]}}</td>
+        <td>{{ada[2]}}</td>
+        <td>{{ada[3]}}</td>
+        <td>{{ada[4]}}</td>
+      </tr>
+  {% endfor %}
+    </tbody>
+  </table>
+
+
+      
+{% else %}
+{% endif %}
+{% endblock body %}

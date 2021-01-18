@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% from "includes/formhelpers.html" import render_field %}
+{% block title %}
+  Firma Kayıt
+{% endblock title %}
+{% block body %}
+  
+
+    <form method=post>
+      <div class="form-group border" style=" width: 200px; height: 550px; float: left;">
+        <dl>
+          {{ render_field(form.fname) }}
+          {{ render_field(form.fsurname) }}
+          {{ render_field(form.tic) }}
+          {{ render_field(form.adres) }}
+          {{ render_field(form.yetkili) }}
+          {{ render_field(form.yetkilitel) }}
+          {{ render_field(form.yetkilimail) }}
+          {{ render_field(form.yetkiliadres) }}
+          {{ render_field(form.password) }}
+        </dl>
+        <p><input type="submit" value=Register>
+     </div> 
+     <div style="width: 1000; height: 550px; ">
+      <img src="https://i.hizliresim.com/k8eOxF.jpg" style="width: 1000; height: 550px;" alt="">
+    </div>
+    </form>
+{% endblock body %}

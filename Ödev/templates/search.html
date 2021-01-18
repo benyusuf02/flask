@@ -1,0 +1,53 @@
+[{% extends "layout.html" %}
+{% block title %}
+  personel Bulma
+{% endblock title %}
+{% block body %} <div class="row">
+<form action="/search" method = "POST"> <!-- note action -->
+<h3>Muhasebe bilgisi</h3>
+    <select name="select1"> <!-- note the name -->
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <button type="submit" class="btn btn-danger">Ara</button>
+</form></div>
+
+<div class="container border">
+  <h2>Hover Rows</h2>
+  <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+  <table class="table table-hover">
+    <thead>
+    <thead>
+      <tr>
+        <th>İD</th>
+        <th>NAME</th>
+        <th>SURNAME</th>
+        <th>Muhasebe Programları</th>
+        <th>Ofis Programları</th>
+        <th>Teknik bilgi</th>
+      </tr>
+    </thead>
+    {% for adaa in asd %}
+  
+    <tbody>
+      <tr>
+        <td>{{adaa[0]}}</td>
+        <td>{{adaa[1]}}</td>
+        <td>{{adaa[2]}}</td>
+        <td>{{adaa[3]}}</td>
+        <td>{{adaa[4]}}</td>
+        <td>{{adaa[5]}}</td>
+
+
+      </tr>
+  {% endfor %}
+    </tbody>
+  </table>
+
+
+      
+
+{% endblock body %}
